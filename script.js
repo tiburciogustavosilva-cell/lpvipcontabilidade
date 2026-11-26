@@ -104,6 +104,20 @@
   const hoje = Date.UTC(agora.getFullYear(), agora.getMonth(), agora.getDate());
   let salto = 0;
 
+  /* Cartão "Próximo prazo" do hero: primeiro vencimento de hoje em diante */
+  if ($("#prazo")) {
+    const y = agora.getFullYear(), m = agora.getMonth();
+    const o = [...obrigacoes(y, m), ...obrigacoes(y + (m === 11), (m + 1) % 12)].find((x) => x.t >= hoje);
+    const d = new Date(o.t), opt = { timeZone: "UTC" };
+    $("#prazoDia").textContent = d.getUTCDate();
+    $("#prazoMes").textContent = d.toLocaleDateString("pt-BR", { ...opt, month: "short" }).replace(".", "");
+    $("#prazoNome").textContent = o.nome;
+    const falta = Math.round((o.t - hoje) / DIA);
+    $("#prazoRot").textContent = falta === 0 ? "Vence hoje" : `Próximo prazo, em ${falta} dia${falta > 1 ? "s" : ""}`;
+    $("#prazo").setAttribute("aria-label", `Próximo prazo: ${o.nome}, ${d.toLocaleDateString("pt-BR", { ...opt, day: "numeric", month: "long" })}. Ver agenda.`);
+    $("#prazo").hidden = false;
+  }
+
   function desenhar() {
     const ref = new Date(Date.UTC(agora.getFullYear(), agora.getMonth() + salto, 1));
     const y = ref.getUTCFullYear(), m = ref.getUTCMonth();
@@ -141,49 +155,19 @@
       l.append(li);
     });
   }
-  $("#mesAnt").addEventListener("click", () => { salto--; desenhar(); });
-  $("#mesProx").addEventListener("click", () => { salto++; desenhar(); });
-  desenhar();
-  $("#abrirAgenda").addEventListener("click", (e) => {
-    const abrir = $("#agenda").hidden;
-    $("#agenda").hidden = !abrir;
-    e.currentTarget.setAttribute("aria-expanded", String(abrir));
-    e.currentTarget.textContent = abrir ? "Fechar" : "Acessar";
-  });
-
-  /* ---------- Newsletter ---------- */
-  const nMail = $("#n-email"), nOk = $("#n-ok"), nMsg = $("#n-msg");
-  const avisar = (txt, bom) => { nMsg.textContent = txt; nMsg.hidden = !txt; nMsg.classList.toggle("certo", !!bom); };
-  const limpar = () => { nMail.removeAttribute("aria-invalid"); nOk.removeAttribute("aria-invalid"); avisar(""); };
-  const falhar = (campo, txt) => { campo.setAttribute("aria-invalid", "true"); avisar(txt); campo.focus(); };
-  nMail.addEventListener("input", limpar);
-  nOk.addEventListener("change", limpar);
-  $("#news").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    limpar();
-    const form = e.currentTarget, mail = nMail.value.trim();
-    if (!mail || !nMail.checkValidity()) return falhar(nMail, "Escreva um e-mail válido, como nome@dominio.com.");
-    if (!nOk.checked) return falhar(nOk, "Marque que você leu e concorda com os termos.");
-    if (!V.newsletter) {
-      window.open(zap(`Olá! Quero receber a newsletter da Vip. Meu e-mail é ${mail}. Li e concordo com os termos.`), "_blank", "noopener");
-      return avisar("Envie a mensagem que abrimos no WhatsApp para concluir.", true);
-    }
-    try {
-      const r = await fetch(V.newsletter, { method: "POST", body: new URLSearchParams({ email: mail }) });
-      if (!r.ok) throw new Error(r.status);
-      form.reset();
-      avisar("E-mail cadastrado.", true);
-    } catch {
-      avisar("Não foi possível cadastrar agora. Tente de novo em alguns minutos.");
-    }
-  });
+  if ($("#calGrade")) {
+    $("#mesAnt").addEventListener("click", () => { salto--; desenhar(); });
+    $("#mesProx").addEventListener("click", () => { salto++; desenhar(); });
+    desenhar();
+  }
 
   /* ---------- Rodapé ---------- */
+  if (V.privacidade && $("#privacidade")) $("#privacidade").hidden = false;
   [
     [V.telefone, V.telefone && `tel:+55${V.telefone.replace(/\D/g, "")}`],
     [V.email, V.email && `mailto:${V.email}`],
     [V.instagram && "Instagram @" + V.instagram.replace(/\/+$/, "").split("/").pop(), V.instagram],
-    [V.endereco, V.endereco && "#endereco"],
+    [V.endereco, V.endereco && ($("#endereco") ? "#endereco" : "../index.html#endereco")],
     [V.horario]
   ].filter((x) => x[0]).forEach(([valor, href]) => {
     const li = el("li"), v = el(href ? "a" : "span", "", valor);
@@ -191,7 +175,7 @@
     li.append(v);
     $("#dados").append(li);
   });
-  if (V.endereco) $("#enderecoTxt").textContent = V.endereco;
+  if (V.endereco && $("#enderecoTxt")) $("#enderecoTxt").textContent = V.endereco;
   $("#legal").textContent = [V.responsavel, V.crc, V.cnpj && `CNPJ ${V.cnpj}`].filter(Boolean).join(" | ");
   $("#anoAtual").textContent = agora.getFullYear();
 

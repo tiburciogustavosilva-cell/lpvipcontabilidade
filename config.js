@@ -14,16 +14,7 @@ window.VIP = {
   instagram: "https://www.instagram.com/vipcontabilidadeadm/",
   facebook: "",          // Ex.: "https://facebook.com/suapagina" (só no cartão digital)
 
-  // Links do site atual. Enquanto vazios, levam à própria seção de artigos.
-  blog: "",              // página com todas as notícias
-  artigo1: "",           // Obrigações fiscais do condomínio
-  artigo2: "",           // Danos aos veículos nas garagens
-  artigo3: "",           // Condomínio e IPTU antes das chaves
-  privacidade: "",       // Política de Privacidade
-
-  // Endereço que recebe o cadastro da newsletter (POST com o campo "email").
-  // Enquanto vazio, o pedido de cadastro segue pelo WhatsApp.
-  newsletter: "",
+  privacidade: "",       // link da Política de Privacidade (aparece no rodapé quando preenchido)
 
   // O código de ética (NBC PG 01) pede nome, categoria e registro em anúncios.
   responsavel: "",       // Ex.: "Fulano de Tal, Contador"

@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vip Gestão Contábil Condominial | Contabilidade para condomínios</title>
-    <meta name="description" content="Serviços contábeis condominiais online para todo o Brasil. Assessoria administrativa, departamento pessoal e gestão financeira para o seu condomínio." />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="description" content="Contabilidade, folha de pagamento e prestação de contas para condomínios, com atendimento online para todo o Brasil. Escritório em Brasília - DF." />
+    <meta name="theme-color" content="#F6F7F9" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vip Gestão Contábil Condominial" />
     <meta property="og:title" content="Vip Gestão Contábil Condominial" />
-    <meta property="og:description" content="Serviços contábeis condominiais online para todo o Brasil!" />
+    <meta property="og:description" content="Contabilidade para condomínios, com atendimento online para todo o Brasil." />
     <meta property="og:locale" content="pt_BR" />
     <!-- Fotos: banco gratuito (Unsplash) como provisórias. Trocar pelas fotos reais quando houver. -->
 
@@ -18,7 +18,7 @@
     <link rel="preload" as="image" href="assets/hero-condominio.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script>
       document.documentElement.classList.add("js");
@@ -49,7 +49,7 @@
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
     <header class="header" id="topo">
-      <div class="container header__inner">
+      <div class="wrap header__inner">
         <a href="#topo" class="logo" aria-label="Vip Gestão Contábil Condominial, voltar ao início">
           <span class="logo-anim"><img src="assets/logo-vip.png" alt="" width="505" height="512" /></span>
           <span class="logo__txt"><strong>VIP</strong> Gestão Contábil<br />Condominial</span>
@@ -57,16 +57,15 @@
 
         <nav class="nav" id="nav" aria-label="Principal">
           <ul>
-            <li><a href="#topo">Home</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#endereco">Endereço</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#utilitario">Agenda</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
 
-        <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial." class="btn btn--primary btn--sm header__cta"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Fale conosco!</a>
+        <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial." class="btn btn--gold btn--sm header__cta"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Falar no WhatsApp</a>
 
         <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu de navegação">
           <span></span>
@@ -77,191 +76,145 @@
     <main id="conteudo-principal">
       <!-- HERO -->
       <section class="hero" aria-label="Apresentação">
-        <div class="container hero__grid">
-          <div class="hero__content">
-            <p class="eyebrow enter" style="--i: 0">Escritório contábil em Brasília - DF</p>
-            <h1 class="enter" style="--i: 1">Serviços contábeis condominiais online para <em>todo o Brasil!</em></h1>
-            <p class="hero__lede hero__lede--forte enter" style="--i: 2">Serviço especializado para uma gestão de qualidade em seu condomínio</p>
-            <p class="hero__lede enter" style="--i: 3">Nosso foco é levar soluções que contribuam para facilitar e agilizar sua gestão.</p>
-            <div class="hero__actions enter" style="--i: 4">
-              <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar sobre a contabilidade do meu condomínio." class="btn btn--primary"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Fale conosco!</a>
-              <a href="#servicos" class="btn btn--ghost">Saiba mais!</a>
+        <div class="wrap hero__grid">
+          <div>
+            <p class="eyebrow enter" style="--i: 0">Contabilidade para condomínios</p>
+            <h1 class="enter" style="--i: 1">Condomínio em dia, <span class="hl">síndico tranquilo.</span></h1>
+            <p class="lede enter" style="--i: 2">Contabilidade, folha de pagamento e prestação de contas do seu condomínio, com atendimento online para todo o Brasil.</p>
+            <div class="hero__actions enter" style="--i: 3">
+              <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar sobre a contabilidade do meu condomínio." class="btn btn--gold"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Falar no WhatsApp</a>
+              <a href="#servicos" class="btn btn--line">Ver serviços</a>
             </div>
           </div>
 
-          <figure class="hero__media">
-            <img src="assets/hero-condominio.jpg" alt="Fachada de um condomínio residencial visto de baixo, com céu azul" width="1500" height="1500" fetchpriority="high" decoding="async" />
-          </figure>
+          <div class="hero__media">
+            <figure class="hero__photo">
+              <img src="assets/hero-condominio.jpg" alt="Fachada de um prédio residencial visto de baixo, com céu azul" width="1500" height="1500" fetchpriority="high" decoding="async" />
+            </figure>
+            <a class="prazo enter" style="--i: 4" href="#utilitario" id="prazo" hidden>
+              <span class="prazo__dia" aria-hidden="true"><b id="prazoDia"></b><small id="prazoMes"></small></span>
+              <span class="prazo__rot" id="prazoRot">Próximo prazo do condomínio</span>
+              <strong class="prazo__nome" id="prazoNome"></strong>
+              <span class="more">Ver agenda <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
         </div>
       </section>
 
-      <!-- CREDENCIAIS -->
-      <section class="stats" aria-label="Diferenciais">
-        <dl class="container stats__grid reveal">
-          <div>
-            <dt>Online</dt>
-            <dd>suporte para atendimento totalmente online</dd>
-          </div>
-          <div>
-            <dt>Todo o Brasil</dt>
-            <dd>nossos serviços em qualquer lugar do país</dd>
-          </div>
-          <div>
-            <dt>Condomínios</dt>
-            <dd>experiência na área de gestão condominial</dd>
-          </div>
-          <div>
-            <dt>Agilidade</dt>
-            <dd>nos seus procedimentos contábeis e jurídicos</dd>
-          </div>
-        </dl>
-      </section>
-
       <!-- SERVIÇOS -->
-      <section class="section section--alt" id="servicos">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Conheça os nossos serviços</p>
-            <h2>Conheça os serviços da Vip Gestão Contábil <em>Condominial</em></h2>
+      <section class="section" id="servicos">
+        <div class="wrap">
+          <header class="head reveal">
+            <h2>O que a Vip faz pelo seu condomínio</h2>
+            <p class="lede">Quatro frentes que cobrem a rotina contábil, fiscal e trabalhista, para o síndico não precisar dar conta de tudo sozinho.</p>
           </header>
 
-          <ul class="cards cards--serv">
-            <li class="reveal">
-              <img src="assets/assessoria-administrativa.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <h3>Assessoria administrativa</h3>
-                <p>Conte com profissionais altamente qualificados para acompanhar as suas rotinas administrativas. Fornecemos a você toda a expertise em gestão de condomínios!</p>
-                <a class="cards__link" href="#contato" data-wa="Olá! Vim pelo site e quero saber mais sobre assessoria administrativa." aria-label="Saiba mais sobre assessoria administrativa">Saiba mais! <span aria-hidden="true">→</span></a>
-              </div>
-            </li>
-            <li class="reveal">
-              <img src="assets/departamento-pessoal.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <h3>Departamento pessoal</h3>
-                <p>Tenha toda a segurança nos seus processos de departamento pessoal, evitando processos judiciais causados por falha na elaboração da folha de pagamento.</p>
-                <a class="cards__link" href="#contato" data-wa="Olá! Vim pelo site e quero saber mais sobre departamento pessoal." aria-label="Saiba mais sobre departamento pessoal">Saiba mais! <span aria-hidden="true">→</span></a>
-              </div>
-            </li>
-            <li class="reveal">
-              <img src="assets/facilidade-online.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <h3>Facilidade online</h3>
-                <p>Tenha total facilidade em seus procedimentos internos com a Vip Gestão Contábil Condominial. Você pode usufruir de nossos serviços em qualquer lugar do Brasil, pois temos um suporte para atendimento totalmente online.</p>
-                <a class="cards__link" href="#contato" data-wa="Olá! Vim pelo site e quero saber mais sobre o atendimento online." aria-label="Saiba mais sobre facilidade online">Saiba mais! <span aria-hidden="true">→</span></a>
-              </div>
-            </li>
-            <li class="reveal">
-              <img src="assets/gestao-financeira.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
+          <div class="bento">
+            <article class="bento__item bento__item--a reveal">
+              <div class="bento__img"><img src="assets/gestao-financeira.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+              <div class="bento__body">
                 <h3>Gestão financeira</h3>
-                <p>Conte com profissionais experientes fazendo a gestão financeira do seu condomínio. Providenciamos um atendimento personalizado que traz agilidade para o seu dia a dia.</p>
-                <a class="cards__link" href="#contato" data-wa="Olá! Vim pelo site e quero saber mais sobre gestão financeira." aria-label="Saiba mais sobre gestão financeira">Saiba mais! <span aria-hidden="true">→</span></a>
+                <p>Receitas, despesas e inadimplência acompanhadas mês a mês, com números claros para o síndico, o conselho e a assembleia.</p>
+                <ul class="inclui">
+                  <li>Balancete e prestação de contas mensal</li>
+                  <li>Previsão orçamentária para a assembleia</li>
+                  <li>Controle da inadimplência</li>
+                </ul>
               </div>
-            </li>
-            <li class="reveal cards__cta">
-              <div class="cards__body">
-                <p class="cards__tag">Equipe especializada</p>
-                <h3>Venha fazer parte da nossa contabilidade!</h3>
-                <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com um especialista." class="btn btn--primary"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Fale com um especialista!</a>
+            </article>
+
+            <article class="bento__item bento__item--b bento__item--navy reveal">
+              <div class="bento__body">
+                <h3>Departamento pessoal</h3>
+                <p>A folha dos funcionários do condomínio calculada e enviada no prazo, com menos risco de multas e ações trabalhistas.</p>
+                <ul class="inclui">
+                  <li>Folha, férias e 13º salário</li>
+                  <li>eSocial e FGTS Digital</li>
+                  <li>Admissões e rescisões</li>
+                </ul>
               </div>
-              <div class="logo-anim cards__selo"><img src="assets/logo-vip.png" alt="" width="505" height="512" loading="lazy" /></div>
+            </article>
+
+            <article class="bento__item bento__item--c reveal">
+              <div class="bento__body">
+                <h3>Assessoria administrativa</h3>
+                <p>Apoio ao síndico nas rotinas do dia a dia e nas decisões que envolvem convenção, contratos e assembleias.</p>
+                <ul class="inclui">
+                  <li>Apoio na preparação de assembleias</li>
+                  <li>Análise de contratos com fornecedores</li>
+                  <li>Orientação sobre convenção e regimento</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="bento__item bento__item--d reveal">
+              <div class="bento__img"><img src="assets/facilidade-online.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+              <div class="bento__body">
+                <h3>Atendimento online</h3>
+                <p>Atendemos condomínios em qualquer cidade do Brasil. Documentos, dúvidas e relatórios são resolvidos à distância, sem precisar ir ao escritório.</p>
+                <ul class="inclui">
+                  <li>Envio digital de documentos</li>
+                  <li>Atendimento pelo WhatsApp</li>
+                  <li>Relatórios por e-mail</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="section" id="como-funciona">
+        <div class="wrap">
+          <header class="head reveal">
+            <h2>Trocar de contabilidade é mais simples do que parece</h2>
+            <p class="lede">A transição é feita por nós, com o síndico acompanhando cada etapa.</p>
+          </header>
+          <ol class="passos">
+            <li class="reveal">
+              <h3>Conversa inicial</h3>
+              <p>Você conta como é o condomínio: número de unidades, funcionários e se há administradora. Com isso montamos uma proposta sob medida.</p>
             </li>
-          </ul>
+            <li class="reveal">
+              <h3>Transição dos documentos</h3>
+              <p>Solicitamos à contabilidade anterior os balancetes, livros e cadastros do condomínio e conferimos tudo antes de assumir.</p>
+            </li>
+            <li class="reveal">
+              <h3>Rotina mensal</h3>
+              <p>Todo mês você recebe o balancete, a folha processada e os prazos cumpridos, com um contato direto para tirar dúvidas.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
       <!-- SOBRE -->
       <section class="section" id="sobre">
-        <div class="container pro">
-          <figure class="pro__media reveal">
+        <div class="wrap sobre">
+          <figure class="sobre__foto reveal">
             <img src="assets/sobre-atendimento.jpg" alt="Profissional sorrindo durante atendimento, com notebook e bloco de anotações" width="1040" height="1300" loading="lazy" decoding="async" />
           </figure>
-
-          <div class="pro__text reveal">
-            <h2>A Vip Gestão Contábil <em>Condominial</em></h2>
-            <div class="pro__quote">
-              <p>Somos uma empresa de serviços de contabilidade com experiência na área de gestão condominial.</p>
-            </div>
-            <p class="pro__p">A Vip Gestão Contábil Condominial é constituída por profissionais de altíssima qualidade, capacitados para dar agilidade aos seus procedimentos contábeis e jurídicos.</p>
-            <a href="#contato" data-wa="Olá! Vim pelo site e quero montar uma proposta para o meu condomínio." class="btn btn--primary pro__cta"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Monte sua proposta</a>
+          <div class="sobre__painel reveal">
+            <h2>Contabilidade feita só para condomínios</h2>
+            <p>A Vip Gestão Contábil Condominial é um escritório de Brasília formado por profissionais com experiência em gestão condominial. Cuidamos dos procedimentos contábeis, fiscais e trabalhistas para o síndico ter tempo para o que importa no prédio.</p>
+            <dl class="fatos">
+              <div><dt>Atendimento online</dt><dd>Para condomínios em todo o Brasil</dd></div>
+              <div><dt>Escritório em Brasília</dt><dd>Vicente Pires, para reuniões presenciais</dd></div>
+              <div><dt>Foco em condomínios</dt><dd>Experiência na gestão condominial</dd></div>
+              <div><dt>Tudo em um lugar</dt><dd>Contabilidade, folha e assessoria</dd></div>
+            </dl>
           </div>
         </div>
       </section>
 
-      <!-- NEWSLETTER -->
-      <section class="news" aria-labelledby="news-t">
-        <div class="container news__grid reveal">
-          <div>
-            <h2 id="news-t">Cadastre-se em nossa <em>newsletter</em></h2>
-            <p>Fique atualizado sobre tudo que acontece no cenário contábil para condomínios. Receba conteúdos diretamente na caixa de entrada do seu e-mail!</p>
-          </div>
-          <form id="news" novalidate>
-            <label for="n-email">E-mail</label>
-            <div class="news__linha">
-              <input id="n-email" type="email" name="email" autocomplete="email" required aria-describedby="n-msg" />
-              <button class="btn btn--primary" type="submit">Cadastrar</button>
-            </div>
-            <div class="news__ok">
-              <input id="n-ok" type="checkbox" required aria-describedby="n-msg" />
-              <p><label for="n-ok">Sim, li e concordo com os termos.</label> <a href="#contato" data-url="privacidade">Política de Privacidade</a></p>
-            </div>
-            <p class="news__msg" id="n-msg" role="status" hidden></p>
-          </form>
-        </div>
-      </section>
-
-      <!-- BLOG -->
-      <section class="section section--alt" id="blog">
-        <div class="container">
-          <header class="section-head section-head--lado reveal">
-            <div>
-              <p class="eyebrow">Confira nossos últimos artigos</p>
-              <h2>Fique por dentro das <em>novidades</em></h2>
-            </div>
-            <a class="btn btn--ghost" href="#blog" data-url="blog">Veja todas as notícias</a>
-          </header>
-
-          <ul class="cards cards--blog">
-            <li class="reveal">
-              <img src="assets/artigo-obrigacoes.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <p class="cards__tag">Administração de Condomínios</p>
-                <h3><a href="#blog" data-url="artigo1">Saiba quais são as obrigações fiscais que um condomínio deve cumprir</a></h3>
-                <p>Em uma empresa, ou na nossa vida pessoal, cumprir com as nossas responsabilidades é fundamental, todas pessoas têm obrigações a cumprir, sejam pessoas físicas ou jurídicas. Impostos e declarações, todos devem cumprir com essas obrigações e um condomínio também tem…</p>
-              </div>
-            </li>
-            <li class="reveal">
-              <img src="assets/artigo-garagem.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <p class="cards__tag">Contabilidade para administração de condomínio</p>
-                <h3><a href="#blog" data-url="artigo2">Entenda quais são as situações em que o condomínio deve arcar com os danos aos veículos nas garagens</a></h3>
-                <p>A responsabilidade do condomínio em determinadas situações sempre gera muitos debates e, como em qualquer relação que envolva a divisão de algo, os conflitos são inúmeros e o desconhecimento sobre os reais direitos e deveres das pessoas cria ainda mais…</p>
-              </div>
-            </li>
-            <li class="reveal">
-              <img src="assets/artigo-chaves.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" />
-              <div class="cards__body">
-                <p class="cards__tag">Acessibilidade em condomínios</p>
-                <h3><a href="#blog" data-url="artigo3">Entenda se é legal a cobrança de Condomínio e IPTU antes da entrega das chaves</a></h3>
-                <p>Contratos de compra e venda de imóveis costumam ser extensos e, por vezes, deixam várias dúvidas em quem está fazendo esse investimento. Uma dúvida frequente envolve a possibilidade de cobrança de despesas de condomínio e IPTU antes da entrega das chaves.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- UTILITÁRIO -->
+      <!-- AGENDA -->
       <section class="section" id="utilitario">
-        <div class="container">
-          <header class="section-head reveal">
-            <p class="eyebrow">Utilitário Contábil</p>
-            <h2>Ferramentas que auxiliarão a sua <em>produtividade!</em></h2>
+        <div class="wrap">
+          <header class="head reveal">
+            <p class="eyebrow">Utilitário contábil</p>
+            <h2>Agenda de obrigações do condomínio</h2>
+            <p class="lede">Os principais prazos federais do mês, já ajustados para feriados nacionais e fins de semana.</p>
           </header>
-          <div class="util reveal">
-            <h3>Agenda de obrigações</h3>
-            <button class="btn btn--ghost" type="button" id="abrirAgenda" aria-expanded="false" aria-controls="agenda">Acessar</button>
-          </div>
-          <div id="agenda" hidden>
+          <div class="agenda reveal">
             <div class="mes">
               <button type="button" class="round" id="mesAnt" aria-label="Mês anterior">←</button>
               <strong id="mesNome" aria-live="polite"></strong>
@@ -271,96 +224,154 @@
               <div class="cal__g" id="calGrade" aria-hidden="true"></div>
               <ol class="cal__l" id="calLista"></ol>
             </div>
-            <p class="nota">Principais prazos federais, calculados pelas regras gerais e pelos feriados nacionais. ISS retido, feriados locais e prorrogações podem mudar as datas. Confirme sempre com seu contador.</p>
+            <p class="nota">Prazos calculados pelas regras gerais e pelos feriados nacionais. ISS retido, feriados locais e prorrogações podem mudar as datas. Confirme sempre com seu contador.</p>
           </div>
         </div>
       </section>
 
-      <!-- ENDEREÇO -->
-      <section class="location" id="endereco" aria-labelledby="endereco-t">
-        <iframe
-          src="https://www.google.com/maps?q=-15.814297,-48.015783&amp;z=17&amp;hl=pt-BR&amp;output=embed"
-          title="Mapa interativo com a localização da Vip Gestão Contábil Condominial"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <!-- BLOG -->
+      <section class="section" id="blog">
+        <div class="wrap">
+          <header class="head reveal">
+            <p class="eyebrow">Blog</p>
+            <h2>Normas de condomínio explicadas em linguagem simples</h2>
+          </header>
 
-        <div class="container">
-          <div class="location__card reveal">
-            <h2 id="endereco-t">Nosso <em>endereço</em></h2>
-            <address>
-              <strong>Vip Gestão Contábil Condominial</strong><br />
-              <span id="enderecoTxt">Edifício Filomena, sala 202<br />St. Hab. Vicente Pires - Vicente Pires<br />Brasília - DF, 70297-400</span>
-            </address>
-            <div class="location__actions">
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=-15.814297%2C-48.015783" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Abrir no Maps</a>
-              <a href="https://waze.com/ul?ll=-15.814297%2C-48.015783&amp;navigate=yes" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">Abrir no Waze</a>
+          <div class="posts posts--home">
+            <a class="post post--grande reveal" href="blog/assembleias-e-quoruns.html">
+              <div class="post__img"><img src="assets/assessoria-administrativa.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+              <p class="post__cat">Assembleias</p>
+              <h3>Assembleia de condomínio: convocação, quórum e o que pode ser decidido</h3>
+              <p>Quem pode convocar, quantos votos cada decisão exige e como funciona a assembleia virtual.</p>
+            </a>
+            <div class="posts__lado">
+              <a class="post post--linha reveal" href="blog/inadimplencia-multas-condominio.html">
+                <div class="post__img"><img src="assets/gestao-financeira.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+                <div><p class="post__cat">Cobrança</p><h3>Inadimplência no condomínio: multa, juros e o que o síndico pode fazer</h3></div>
+              </a>
+              <a class="post post--linha reveal" href="blog/obrigacoes-fiscais-condominio.html">
+                <div class="post__img"><img src="assets/artigo-obrigacoes.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+                <div><p class="post__cat">Obrigações fiscais</p><h3>Quais são as obrigações fiscais e trabalhistas de um condomínio</h3></div>
+              </a>
+              <a class="post post--linha reveal" href="blog/convencao-x-regimento-interno.html">
+                <div class="post__img"><img src="assets/departamento-pessoal.jpg" alt="" width="1080" height="720" loading="lazy" decoding="async" /></div>
+                <div><p class="post__cat">Regras internas</p><h3>Convenção e regimento interno: qual a diferença e o que cada um pode proibir</h3></div>
+              </a>
             </div>
           </div>
+          <p class="posts__fim reveal"><a class="btn btn--line" href="blog/index.html">Ver todos os artigos</a></p>
         </div>
       </section>
 
-      <!-- CTA FINAL -->
-      <section class="section section--cta" id="contato">
-        <div class="container">
-          <div class="cta-band reveal">
-            <div>
-              <h2>Temos uma solução pensada especialmente para o <em>seu condomínio</em></h2>
-              <p>Traga seu problema para a gente e deixe nosso escritório te ajudar. Trabalharemos para dar mais tranquilidade ao seu dia a dia.</p>
-            </div>
-            <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de agendar uma reunião sobre o meu condomínio." class="btn btn--primary btn--lg"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Agende uma reunião!</a>
+      <!-- DÚVIDAS -->
+      <section class="section" id="duvidas">
+        <div class="wrap duvidas">
+          <div class="duvidas__intro reveal">
+            <h2>Dúvidas frequentes</h2>
+            <p class="lede">Não encontrou sua pergunta? Chame a gente no WhatsApp.</p>
+          </div>
+          <div class="duvidas__lista reveal">
+            <details>
+              <summary>Vocês atendem condomínios fora do Distrito Federal?</summary>
+              <p>Sim. O atendimento é online, então atendemos condomínios em qualquer cidade do Brasil. O escritório fica em Vicente Pires, Brasília, para quem preferir uma reunião presencial.</p>
+            </details>
+            <details>
+              <summary>Como funciona a troca de contabilidade?</summary>
+              <p>Depois de aprovada a proposta, solicitamos à contabilidade anterior os documentos do condomínio e conferimos tudo antes de assumir a rotina. O síndico é orientado em cada etapa.</p>
+            </details>
+            <details>
+              <summary>Quais documentos o condomínio precisa enviar?</summary>
+              <p>Em geral: convenção e regimento interno, ata de eleição do síndico, cartão CNPJ, contratos com fornecedores, dados dos funcionários e os últimos balancetes. A lista completa é passada na primeira conversa.</p>
+            </details>
+            <details>
+              <summary>Atendem síndicos profissionais e administradoras?</summary>
+              <p>Sim. Trabalhamos com síndicos moradores, síndicos profissionais e administradoras que precisam de uma contabilidade especializada em condomínios.</p>
+            </details>
+            <details>
+              <summary>Como recebo uma proposta?</summary>
+              <p>Chame no WhatsApp e informe o número de unidades e de funcionários do condomínio. Com esses dados, montamos uma proposta sob medida.</p>
+            </details>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__grid">
-          <div>
-            <div class="logo-anim footer__logo"><img src="assets/logo-vip.png" alt="Vip Gestão Contábil Condominial" width="505" height="512" loading="lazy" /></div>
-            <p>Serviços contábeis condominiais online para todo o Brasil!</p>
+    <!-- FECHAMENTO -->
+    <div class="dark">
+      <section class="section" id="contato" aria-labelledby="contato-t">
+        <div class="wrap contato">
+          <div class="contato__txt reveal">
+            <h2 id="contato-t">Vamos cuidar da contabilidade do seu <span class="hl">condomínio?</span></h2>
+            <p>Conte como está a situação hoje e receba uma proposta sob medida. Atendemos em todo o Brasil.</p>
+            <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de uma proposta para o meu condomínio." class="btn btn--gold"><svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>Falar no WhatsApp</a>
           </div>
 
-          <div>
-            <h3>Navegação Rápida</h3>
-            <ul>
-              <li><a href="#topo">Home</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Nossos Serviços</h3>
-            <ul>
-              <li><a href="#servicos">Assessoria Administrativa</a></li>
-              <li><a href="#servicos">Departamento Pessoal</a></li>
-              <li><a href="#servicos">Facilidade Online</a></li>
-              <li><a href="#servicos">Gestão Financeira</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Contato</h3>
-            <ul id="dados">
-              <li><a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial.">WhatsApp</a></li>
-            </ul>
+          <div class="local reveal" id="endereco">
+            <iframe
+              src="https://www.google.com/maps?q=-15.814297,-48.015783&amp;z=16&amp;hl=pt-BR&amp;output=embed"
+              title="Mapa com a localização da Vip Gestão Contábil Condominial"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="local__info">
+              <address>
+                <strong>Vip Gestão Contábil Condominial</strong><br />
+                <span id="enderecoTxt">Edifício Filomena, sala 202<br />St. Hab. Vicente Pires - Vicente Pires<br />Brasília - DF, 70297-400</span>
+              </address>
+              <div class="local__actions">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=-15.814297%2C-48.015783" target="_blank" rel="noopener noreferrer" class="btn btn--line btn--sm">Abrir no Maps</a>
+                <a href="https://waze.com/ul?ll=-15.814297%2C-48.015783&amp;navigate=yes" target="_blank" rel="noopener noreferrer" class="btn btn--line btn--sm">Abrir no Waze</a>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="footer__bottom">
-          <span>© <span id="anoAtual">2026</span> Vip Gestão Contábil Condominial. Todos os direitos reservados.</span>
-          <span id="legal"></span>
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer__grid">
+            <div>
+              <div class="logo-anim footer__logo"><img src="assets/logo-vip.png" alt="Vip Gestão Contábil Condominial" width="505" height="512" loading="lazy" /></div>
+              <p>Contabilidade para condomínios, com atendimento online para todo o Brasil.</p>
+            </div>
+            <div>
+              <h3>Navegação</h3>
+              <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#como-funciona">Como funciona</a></li>
+                <li><a href="#utilitario">Agenda de obrigações</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Serviços</h3>
+              <ul>
+                <li><a href="#servicos">Gestão financeira</a></li>
+                <li><a href="#servicos">Departamento pessoal</a></li>
+                <li><a href="#servicos">Assessoria administrativa</a></li>
+                <li><a href="#servicos">Atendimento online</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contato</h3>
+              <ul id="dados">
+                <li><a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial.">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <span>© <span id="anoAtual">2026</span> Vip Gestão Contábil Condominial. Todos os direitos reservados.</span>
+            <span id="legal"></span>
+            <a href="#contato" data-url="privacidade" id="privacidade" hidden>Política de Privacidade</a>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
-    <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial." class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+    <a href="#contato" data-wa="Olá! Vim pelo site e gostaria de falar com a Vip Gestão Contábil Condominial." class="whatsapp-float" aria-label="Falar no WhatsApp">
       <svg class="ico" aria-hidden="true"><use href="#i-wa"></use></svg>
-      <span class="whatsapp-float__label" aria-hidden="true">Fale conosco!</span>
+      <span class="whatsapp-float__label" aria-hidden="true">Falar no WhatsApp</span>
     </a>
 
     <script src="logo-animada.js"></script>
